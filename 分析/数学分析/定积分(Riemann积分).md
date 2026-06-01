@@ -88,8 +88,91 @@
 > 一般的，有
 > $$\exists \xi \in [a,b]:\int_a^bf(x)g(x)dx=g(a)\int_a^{\xi}f(x)dx+g(b)\int_{\xi}^bf(x)dx$$
 
-> 对于第一中值定理，我们只需要使用连续函数的介值性和积分的保序性即可证明
-> 对于第二中值定理，我们需要使用$f(x)$有界、$f(x)$的变上限积分$F(x)=\int_a^xf(x)dx$ 连续、g(x)的振幅和无限小、$f(x)g(x)$的积分可拆分证明。
+对于第一中值定理，我们只需要使用连续函数的介值性和积分的保序性即可证明
+对于第二中值定理，我给出下面两个证明
+### 证明一：古典微元分拆与黎曼和放缩法
+
+针对区间 $[a, b]$ 作任一分割 $P: a = x_0 < x_1 < \dots < x_n = b$。记 $\Delta x_i = x_i - x_{i-1}$，取介点 $\xi_i \in [x_{i-1}, x_i]$。
+
+**1. 变换恒等式（阿贝尔变换的思想）：**
+将积分的黎曼和写出，并将 $g(\xi_i)$ 进行增量拆分：
+$$
+\begin{aligned}
+\text{左边} &\approx \sum_{i=1}^n f(\xi_i)g(\xi_i)\Delta x_i \\[1ex]
+&= \sum_{i=1}^{n-1} \left( \sum_{k=1}^i f(\xi_k)\Delta x_k \right) [g(\xi_i) - g(\xi_{i+1})] + g(\xi_n) \sum_{k=1}^n f(\xi_k)\Delta x_k
+\end{aligned}
+$$
+由于 $f \in \mathcal{R}[a, b]$，其变上限积分有界，令 $m = \inf \int f$，$M = \sup \int f$。
+
+**2. 单调性放大与夹逼：**
+利用 $g(x)$ 的单调递增性（$g(\xi_i) - g(\xi_{i+1}) \le 0$），将中间的累加和放大和缩小：
+$$
+\begin{aligned}
+\sum_{i=1}^n f(\xi_i)g(\xi_i)\Delta x_i 
+&\le M \sum_{i=1}^{n-1} [g(\xi_i) - g(\xi_{i+1})] + g(b) M(b-a) \\[1ex]
+&= M \cdot g(a) + \text{尾项误差控项}
+\end{aligned}
+$$
+因为 $g(x)$ 单调必可积，令分割的模 $\|P\| \to 0$，则误差项 $\le \varepsilon$。
+同理可得下界放缩。令 $\varepsilon \to 0$，由介值定理可得：
+$$
+g(a) \cdot \inf \int f \le \int_{a}^{b} f(x)g(x)\,dx \le g(b) \cdot \sup \int f
+$$
+由此即证存在中值点 $\xi \in [a, b]$ 满足定理要求。
+
+---
+### 证明二：分段线性逼近与稠密性推广法
+
+[[积分拓展提高#Rerimann 引理 (Riemann Lemma)#稠密子集]]
+
+#### Step 1: 在 $f \in \mathcal{C}[a, b]$ 条件下的证明
+对区间 $[a, b]$ 进行 $n$ 等分，通过连接 $g(x)$ 在各分点处的取值，构造一条分段线性（Piecewise Linear）的连续函数序列 $g_n(x)$。
+
+**1. 导数的阶梯化与分部积分：**
+由构造知，当 $n \to \infty$ 时，$g_n(x)$ 一致收敛到 $g(x)$，即 $\displaystyle\lim_{n\to\infty} \int_{a}^{b} |g_n(x) - g(x)|\,dx = 0$。
+记 $F(x) = \int_{a}^{x} f(t)\,dt$。由于 $g_n(x)$ 分段线性，其导数 $g_n'(x)$ 为阶梯函数（在分点处补足定义为 0），记为 $\tilde{g}_n'$。对各子区间使用分部积分：
+$$
+\begin{aligned}
+\int_{a}^{b} f(x)g_n(x)\,dx 
+&= \sum_{k=1}^n \int_{x_{k-1}}^{x_k} F'(x)g_n(x)\,dx \\[1ex]
+&= \sum_{k=1}^n \left( \left. F(x)g_n(x) \right|_{x_{k-1}}^{x_k} - \int_{x_{k-1}}^{x_k} F(x)\tilde{g}_n'(x)\,dx \right) \\[1ex]
+&= F(b)g(b) - F(a)g(a) - \int_{a}^{b} F(x)\tilde{g}_n'(x)\,dx
+\end{aligned}
+$$
+
+**2. 积分第一中值定理与子列收敛（致密性）：**
+由于 $\tilde{g}_n'(x) \ge 0$，由积分第一中值定理，对每个 $n$ 存在 $\xi_n \in [a, b]$ 使得：
+$$
+\int_{a}^{b} F(x)\tilde{g}_n'(x)\,dx = F(\xi_n) \int_{a}^{b} \tilde{g}_n'(x)\,dx = F(\xi_n) [g(b) - g(a)]
+$$
+代入得恒等式：$\int_{a}^{b} f \cdot g_n = F(b)g(b) - F(\xi_n)[g(b) - g(a)]$。
+虽然序列 $\{\xi_n\}$ 不一定收敛，但由于其被绑定在紧集 $[a, b]$ 内，根据 **Bolzano-Weierstrass 定理**，必存在收敛子列 $\{\xi_{n_k}\}$，设其极限为 $\xi \in [a, b]$。
+因为 $F(x)$ 连续，故 $\displaystyle\lim_{k\to\infty} F(\xi_{n_k}) = F(\xi)$。令 $k \to \infty$ 取极限可得：
+$$
+\begin{aligned}
+\int_{a}^{b} f(x)g(x)\,dx 
+&= F(b)g(b) - F(\xi)[g(b) - g(a)] \\[1ex]
+&= g(b) [F(b) - F(\xi)] + g(a) F(\xi) \\[1ex]
+&= g(a)\int_{a}^{\xi} f(x)\,dx + g(b)\int_{\xi}^{b} f(x)\,dx
+\end{aligned}
+$$
+
+#### Step 2: 推广至一般的 $f \in \mathcal{R}[a, b]$
+由于连续函数空间 $\mathcal{C}[a, b]$ 在黎曼可积空间 $\mathcal{R}[a, b]$ 中关于 $L^1$ 范数稠密，我们能找到连续函数序列 $f_n \in \mathcal{C}[a, b]$ 满足：
+$$
+\lim_{n\to\infty} \int_{a}^{b} |f_n(x) - f(x)|\,dx = 0 \quad \text{且} \quad \sup_{n} \|f_n\|_\infty \le \|f\|_\infty
+$$
+
+利用强有力的 $L^1$ 残差控制链条，可以将一般可积函数与连续序列的误差压制为 0：
+$$
+\begin{aligned}
+\left| \int_{a}^{b} fg - \left( g(a)\int_{a}^{\xi_n} f + g(b)\int_{\xi_n}^{b} f \right) \right|
+&\le \left| \int_{a}^{b} fg - \int_{a}^{b} f_n g \right| + \left| \int_{a}^{b} f_n g - \left( g(a)\int_{a}^{\xi_n} f_n + g(b)\int_{\xi_n}^{b} f_n \right) \right| \\
+&\quad + \left| g(a)\int_{a}^{\xi_n} (f_n - f) + g(b)\int_{\xi_n}^{b} (f_n - f) \right| \\[1ex]
+&\le \|g\|_\infty \int_{a}^{b} |f_n - f| + 0 + (|g(a)| + |g(b)|) \int_{a}^{b} |f_n - f| \xrightarrow{n\to\infty} 0
+\end{aligned}
+$$
+由致密性原理再次对中值点序列取收敛子列，即证对一切黎曼可积函数 $f$ 定理依然成立。
 
 ***
 ### 微积分基本定理
