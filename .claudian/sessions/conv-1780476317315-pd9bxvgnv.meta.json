@@ -4,8 +4,8 @@
   "title": "Add multivariable function limit definition",
   "titleGenerationStatus": "success",
   "createdAt": 1780476317317,
-  "updatedAt": 1780478580715,
-  "lastResponseAt": 1780478580715,
+  "updatedAt": 1780479947705,
+  "lastResponseAt": 1780479947705,
   "sessionId": "559d77fa-c791-4f8c-8989-a6a3f54bb62f",
   "providerState": {
     "providerSessionId": "559d77fa-c791-4f8c-8989-a6a3f54bb62f"
@@ -13,11 +13,11 @@
   "currentNote": "分析/数学分析/多元微分学.md",
   "usage": {
     "model": "haiku",
-    "inputTokens": 812,
+    "inputTokens": 1016,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 43904,
+    "cacheReadInputTokens": 59904,
     "contextWindow": 200000,
-    "contextTokens": 44716,
-    "percentage": 22
+    "contextTokens": 60920,
+    "percentage": 30
   }
 }
