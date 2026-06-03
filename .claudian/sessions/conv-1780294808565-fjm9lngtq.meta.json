@@ -1,24 +1,26 @@
 {
   "id": "conv-1780294808565-fjm9lngtq",
   "providerId": "claude",
-  "title": "Prove Riemann-Lebesgue Lemma",
+  "title": "Define function limit",
   "titleGenerationStatus": "success",
   "createdAt": 1780294808565,
-  "updatedAt": 1780294834480,
-  "lastResponseAt": 1780294834480,
-  "sessionId": "f3b17104-a80f-4334-9a62-cf12a37fbe8f",
+  "updatedAt": 1780476292310,
+  "lastResponseAt": 1780476247373,
+  "sessionId": "948b9129-6c0f-4704-87ac-b0df00872f2e",
   "providerState": {
-    "providerSessionId": "f3b17104-a80f-4334-9a62-cf12a37fbe8f"
+    "providerSessionId": "948b9129-6c0f-4704-87ac-b0df00872f2e",
+    "previousProviderSessionIds": [
+      "f3b17104-a80f-4334-9a62-cf12a37fbe8f"
+    ]
   },
-  "currentNote": "分析/数学分析/积分拓展提高.md",
   "usage": {
     "model": "haiku",
-    "inputTokens": 2503,
+    "inputTokens": 2230,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 19968,
+    "cacheReadInputTokens": 36480,
     "contextWindow": 200000,
-    "contextTokens": 22471,
-    "percentage": 11,
+    "contextTokens": 38710,
+    "percentage": 19,
     "contextWindowIsAuthoritative": true
   }
 }
