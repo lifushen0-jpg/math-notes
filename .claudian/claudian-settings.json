@@ -3,7 +3,7 @@
   "permissionMode": "yolo",
   "model": "haiku",
   "thinkingBudget": "off",
-  "effortLevel": "medium",
+  "effortLevel": "high",
   "serviceTier": "default",
   "enableAutoTitleGeneration": true,
   "titleGenerationModel": "",
@@ -26,7 +26,8 @@
       "safeMode": "auto",
       "cliPath": "",
       "cliPathsByHost": {
-        "device:76499c92-82f3-441e-9aee-b94da2852de9": "C:\\Users\\Lenovo\\AppData\\Roaming\\npm\\node_modules\\@anthropic-ai\\claude-code\\cli-wrapper.cjs"
+        "device:76499c92-82f3-441e-9aee-b94da2852de9": "C:\\Users\\Lenovo\\AppData\\Roaming\\npm\\node_modules\\@anthropic-ai\\claude-code\\cli-wrapper.cjs",
+        "device:0de90418-409b-48c2-bb90-05744284943f": "D:\\tool\\Claude Code\\node_modules\\@anthropic-ai\\claude-code\\cli-wrapper.cjs"
       },
       "loadUserSettings": true,
       "enableChrome": false,
@@ -71,7 +72,7 @@
     "claude": "haiku"
   },
   "savedProviderEffort": {
-    "claude": "medium"
+    "claude": "high"
   },
   "savedProviderServiceTier": {},
   "savedProviderThinkingBudget": {
