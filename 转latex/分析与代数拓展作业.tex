@@ -1,0 +1,257 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue,
+  citecolor=blue
+}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+
+\theoremstyle{remark}
+\newtheorem*{idea}{Key Idea}
+
+\title{Maschke's Theorem and Its Proof}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{theorem}[Maschke]
+Let \(G\) be a finite group, and let
+\[
+  \rho: G \longrightarrow \operatorname{GL}(V)
+\]
+be a finite-dimensional representation of \(G\) over a field \(\mathbb{F}\).
+If
+\[
+  \operatorname{char}(\mathbb{F}) \nmid |G|,
+\]
+then \(\rho\) is completely reducible. More precisely, for every
+\(G\)-invariant subspace \(W \subseteq V\), there exists a \(G\)-invariant
+subspace \(U \subseteq V\) such that
+\[
+  V = W \oplus U.
+\]
+Equivalently, every \(G\)-invariant subspace has a \(G\)-invariant
+complement.
+\end{theorem}
+
+\begin{proof}
+The central idea of the proof is \emph{averaging}. Since the group is finite,
+we can average an arbitrary linear projection over the group action and thereby
+turn it into a \(G\)-equivariant projection.
+
+\subsection*{Step 1: Construct an arbitrary linear projection}
+
+Let \(W \subseteq V\) be a \(G\)-invariant subspace. By linear algebra, we may
+choose a basis
+\[
+  \{w_1,\dots,w_m\}
+\]
+of \(W\), and extend it to a basis
+\[
+  \{w_1,\dots,w_m,u_1,\dots,u_k\}
+\]
+of \(V\). Define a linear map
+\[
+  \pi: V \longrightarrow W
+\]
+by
+\[
+  \pi(w_i)=w_i,\qquad \pi(u_j)=0,
+  \qquad i=1,\dots,m,\ j=1,\dots,k.
+\]
+Then
+\[
+  \pi|_W=\operatorname{id}_W,\qquad
+  \operatorname{im}(\pi)=W,\qquad
+  \pi^2=\pi.
+\]
+Thus \(\pi\) is a projection onto \(W\). However, \(\pi\) is not necessarily
+\(G\)-equivariant; it is merely a linear projection.
+
+\subsection*{Step 2: Average the projection}
+
+Define a new linear map \(\widetilde{\pi}:V\to V\) by
+\[
+  \widetilde{\pi}(v)
+  =
+  \frac{1}{|G|}
+  \sum_{g\in G}
+  \rho(g)\,\pi\bigl(\rho(g)^{-1}v\bigr),
+  \qquad v\in V.
+\]
+The scalar \(|G|^{-1}\) exists in \(\mathbb{F}\), because
+\(\operatorname{char}(\mathbb{F})\nmid |G|\).
+
+Intuitively, for each \(g\in G\), we first pull \(v\) back by
+\(\rho(g)^{-1}\), project it onto \(W\) using \(\pi\), push the result forward
+by \(\rho(g)\), and then average over all group elements.
+
+\subsection*{Step 3: Verify the key properties of \(\widetilde{\pi}\)}
+
+\paragraph{(a) The image of \(\widetilde{\pi}\) is contained in \(W\).}
+For any \(v\in V\) and \(g\in G\), we have
+\[
+  \pi\bigl(\rho(g)^{-1}v\bigr)\in W.
+\]
+Since \(W\) is \(G\)-invariant, applying \(\rho(g)\) keeps the vector inside
+\(W\). Hence
+\[
+  \rho(g)\,\pi\bigl(\rho(g)^{-1}v\bigr)\in W.
+\]
+Therefore the finite sum also lies in \(W\), and so
+\[
+  \operatorname{im}(\widetilde{\pi})\subseteq W.
+\]
+
+\paragraph{(b) The map \(\widetilde{\pi}\) restricts to the identity on \(W\).}
+Let \(w\in W\). Since \(W\) is \(G\)-invariant, we have
+\[
+  \rho(g)^{-1}w\in W.
+\]
+Because \(\pi|_W=\operatorname{id}_W\),
+\[
+  \pi\bigl(\rho(g)^{-1}w\bigr)=\rho(g)^{-1}w.
+\]
+Therefore
+\[
+  \rho(g)\,\pi\bigl(\rho(g)^{-1}w\bigr)
+  =
+  \rho(g)\rho(g)^{-1}w
+  =
+  w.
+\]
+Thus every term in the average equals \(w\), so
+\[
+  \widetilde{\pi}(w)
+  =
+  \frac{1}{|G|}
+  \sum_{g\in G} w
+  =
+  w.
+\]
+Consequently,
+\[
+  \widetilde{\pi}|_W=\operatorname{id}_W.
+\]
+Together with \(\operatorname{im}(\widetilde{\pi})\subseteq W\), this implies
+\[
+  \operatorname{im}(\widetilde{\pi})=W
+  \qquad\text{and}\qquad
+  \widetilde{\pi}^2=\widetilde{\pi}.
+\]
+
+\paragraph{(c) The map \(\widetilde{\pi}\) is \(G\)-equivariant.}
+Let \(h\in G\) and \(v\in V\). Then
+\[
+\begin{aligned}
+  \widetilde{\pi}(\rho(h)v)
+  &=
+  \frac{1}{|G|}
+  \sum_{g\in G}
+  \rho(g)\,\pi\bigl(\rho(g)^{-1}\rho(h)v\bigr) \\
+  &=
+  \frac{1}{|G|}
+  \sum_{g\in G}
+  \rho(g)\,\pi\bigl(\rho(g^{-1}h)v\bigr).
+\end{aligned}
+\]
+Now set \(t=h^{-1}g\), so \(g=ht\). As \(g\) ranges over \(G\), so does
+\(t\). Hence
+\[
+\begin{aligned}
+  \widetilde{\pi}(\rho(h)v)
+  &=
+  \frac{1}{|G|}
+  \sum_{t\in G}
+  \rho(ht)\,\pi\bigl(\rho(t)^{-1}v\bigr) \\
+  &=
+  \rho(h)
+  \left(
+  \frac{1}{|G|}
+  \sum_{t\in G}
+  \rho(t)\,\pi\bigl(\rho(t)^{-1}v\bigr)
+  \right) \\
+  &=
+  \rho(h)\,\widetilde{\pi}(v).
+\end{aligned}
+\]
+Therefore \(\widetilde{\pi}\) is a \(G\)-equivariant projection onto \(W\).
+
+\subsection*{Step 4: Take the kernel to obtain a \(G\)-invariant complement}
+
+Define
+\[
+  U=\ker(\widetilde{\pi})
+  =
+  \{u\in V\mid \widetilde{\pi}(u)=0\}.
+\]
+Since \(\widetilde{\pi}\) is a projection with image \(W\), linear algebra gives
+\[
+  V=\operatorname{im}(\widetilde{\pi})\oplus\ker(\widetilde{\pi})
+  =
+  W\oplus U.
+\]
+It remains only to check that \(U\) is \(G\)-invariant. If \(u\in U\), then
+\(\widetilde{\pi}(u)=0\). For any \(g\in G\), using \(G\)-equivariance gives
+\[
+  \widetilde{\pi}(\rho(g)u)
+  =
+  \rho(g)\widetilde{\pi}(u)
+  =
+  \rho(g)0
+  =
+  0.
+\]
+Thus \(\rho(g)u\in U\), so \(U\) is \(G\)-invariant.
+
+We have therefore found a \(G\)-invariant complement \(U\) of \(W\), namely
+\[
+  V=W\oplus U.
+\]
+\end{proof}
+
+\begin{corollary}[Complete reducibility]
+Under the hypotheses of Maschke's theorem, every finite-dimensional
+representation of \(G\) is a direct sum of irreducible subrepresentations.
+\end{corollary}
+
+\begin{proof}
+If \(V\) is irreducible, there is nothing to prove. Otherwise, choose a
+nonzero proper \(G\)-invariant subspace \(W\subsetneq V\). By Maschke's theorem,
+there is a \(G\)-invariant subspace \(U\) such that
+\[
+  V=W\oplus U.
+\]
+Both \(W\) and \(U\) have strictly smaller dimension than \(V\). Repeating the
+argument and using induction on \(\dim V\), we obtain
+\[
+  V=V_1\oplus V_2\oplus\cdots\oplus V_r,
+\]
+where each \(V_i\) is irreducible.
+\end{proof}
+
+\begin{idea}
+The proof rests on four points:
+\begin{enumerate}[label=\arabic*.]
+  \item Linear algebra provides an arbitrary projection \(\pi:V\to W\).
+  \item Averaging over the finite group turns \(\pi\) into a \(G\)-equivariant
+  projection \(\widetilde{\pi}\).
+  \item The change of variables in the group sum proves equivariance.
+  \item The kernel of \(\widetilde{\pi}\) is automatically a \(G\)-invariant
+  complement of \(W\).
+\end{enumerate}
+\end{idea}
+
+\end{document}

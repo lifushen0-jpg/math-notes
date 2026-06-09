@@ -1,0 +1,24 @@
+{
+  "id": "conv-1781000046688-mmgqjnktg",
+  "providerId": "claude",
+  "title": "Prove Maschke's theorem",
+  "titleGenerationStatus": "success",
+  "createdAt": 1781000046689,
+  "updatedAt": 1781000123326,
+  "lastResponseAt": 1781000123326,
+  "sessionId": "097625ea-550e-4424-9d17-a80e016b79fa",
+  "providerState": {
+    "providerSessionId": "097625ea-550e-4424-9d17-a80e016b79fa"
+  },
+  "currentNote": "代数/抽象代数/群表示论.md",
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 3904,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 28416,
+    "contextWindow": 200000,
+    "contextTokens": 32320,
+    "percentage": 16,
+    "contextWindowIsAuthoritative": true
+  }
+}
