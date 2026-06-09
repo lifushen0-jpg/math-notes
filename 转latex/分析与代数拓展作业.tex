@@ -13,7 +13,6 @@
 }
 
 \newtheorem{theorem}{Theorem}
-\newtheorem{corollary}{Corollary}
 
 \theoremstyle{remark}
 \newtheorem*{idea}{Key Idea}
@@ -220,26 +219,6 @@ We have therefore found a \(G\)-invariant complement \(U\) of \(W\), namely
 \[
   V=W\oplus U.
 \]
-\end{proof}
-
-\begin{corollary}[Complete reducibility]
-Under the hypotheses of Maschke's theorem, every finite-dimensional
-representation of \(G\) is a direct sum of irreducible subrepresentations.
-\end{corollary}
-
-\begin{proof}
-If \(V\) is irreducible, there is nothing to prove. Otherwise, choose a
-nonzero proper \(G\)-invariant subspace \(W\subsetneq V\). By Maschke's theorem,
-there is a \(G\)-invariant subspace \(U\) such that
-\[
-  V=W\oplus U.
-\]
-Both \(W\) and \(U\) have strictly smaller dimension than \(V\). Repeating the
-argument and using induction on \(\dim V\), we obtain
-\[
-  V=V_1\oplus V_2\oplus\cdots\oplus V_r,
-\]
-where each \(V_i\) is irreducible.
 \end{proof}
 
 \begin{idea}
