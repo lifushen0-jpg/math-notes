@@ -1,0 +1,24 @@
+{
+  "id": "conv-1781333518670-4lb25cyzs",
+  "providerId": "claude",
+  "title": "Find irreducible representations of finite abel...",
+  "titleGenerationStatus": "success",
+  "createdAt": 1781333518670,
+  "updatedAt": 1781333627742,
+  "lastResponseAt": 1781333627742,
+  "sessionId": "151bcedb-4937-471e-86dd-1d97642ce1e2",
+  "providerState": {
+    "providerSessionId": "151bcedb-4937-471e-86dd-1d97642ce1e2"
+  },
+  "currentNote": "转latex/分析与代数拓展作业.md",
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 1734,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 27904,
+    "contextWindow": 200000,
+    "contextTokens": 29638,
+    "percentage": 15,
+    "contextWindowIsAuthoritative": true
+  }
+}

@@ -12,10 +12,11 @@
   citecolor=blue
 }
 
-\newtheorem{theorem}{Theorem}
+\newtheorem{question}{Question}
 
 \theoremstyle{remark}
 \newtheorem*{idea}{Key Idea}
+\renewcommand{\proofname}{Proof}
 
 \title{Maschke's Theorem and Its Proof}
 \author{
@@ -29,7 +30,7 @@
 
 \maketitle
 
-\begin{Question}[Maschke's Theorem]
+\begin{question}[Maschke's Theorem]
 Let \(G\) be a finite group, and let
 \[
   \rho: G \longrightarrow \operatorname{GL}(V)
@@ -47,7 +48,7 @@ subspace \(U \subseteq V\) such that
 \]
 Equivalently, every \(G\)-invariant subspace has a \(G\)-invariant
 complement.
-\end{theorem}
+\end{question}
 
 \begin{proof}
 The central idea of the proof is \emph{averaging}. Since the group is finite,
@@ -236,5 +237,123 @@ The proof rests on four points:
   complement of \(W\).
 \end{enumerate}
 \end{idea}
+
+\section*{Irreducible Representations of Finite Abelian Groups}
+
+\begin{question}
+Let \(G\) be a finite abelian group, and let \(\mathbb{F}\) be an
+algebraically closed field such that
+\[
+  \operatorname{char}(\mathbb{F}) \nmid |G|.
+\]
+Then every irreducible representation of \(G\) over \(\mathbb{F}\) is
+one-dimensional.
+\end{question}
+
+\begin{proof}
+Let \((\rho,V)\) be an irreducible representation of \(G\).
+Since \(G\) is abelian, for any \(g,h\in G\) we have
+\[
+  \rho(g)\rho(h)=\rho(gh)=\rho(hg)=\rho(h)\rho(g).
+\]
+Thus every operator \(\rho(g)\) commutes with every operator \(\rho(h)\).
+In particular, each \(\rho(g)\) commutes with the whole image \(\rho(G)\), so
+\(\rho(g)\) is a \(G\)-module endomorphism of \(V\).
+
+Because \(V\) is irreducible and \(\mathbb{F}\) is algebraically closed,
+Schur's lemma implies that every such endomorphism is scalar. Hence for each
+\(g\in G\) there exists \(\lambda_g\in\mathbb{F}\) such that
+\[
+  \rho(g)=\lambda_g \operatorname{id}_V.
+\]
+Therefore every one-dimensional subspace of \(V\) is \(G\)-invariant. If
+\(\dim V>1\), then \(V\) contains a nontrivial proper \(G\)-invariant
+subspace, contradicting irreducibility. So \(\dim V=1\).
+\end{proof}
+
+\subsection*{Characters}
+
+A one-dimensional representation is exactly a group homomorphism
+\[
+  \chi:G\longrightarrow \mathbb{F}^{\times}
+  =\operatorname{GL}(1,\mathbb{F}),
+\]
+which is called a \emph{character} of \(G\). The set of all characters forms
+a group under pointwise multiplication:
+\[
+  \widehat{G}=\operatorname{Hom}(G,\mathbb{F}^{\times}),
+\]
+called the dual group of \(G\).
+
+\subsection*{The Cyclic Case}
+
+If \(G=C_n=\langle x\mid x^n=1\rangle\), then every irreducible representation
+is determined uniquely by the image of the generator \(x\). Let
+\(\omega\in\mathbb{F}\) be a primitive \(n\)-th root of unity. For each
+\(k=0,1,\dots,n-1\), define
+\[
+  \chi_k(x)=\omega^k.
+\]
+Then
+\[
+  \chi_k(x^j)=\omega^{kj},
+\]
+and these give all inequivalent irreducible representations of \(C_n\). Hence
+\[
+  \widehat{C_n}=\{\chi_0,\chi_1,\dots,\chi_{n-1}\}\cong C_n.
+\]
+
+\subsection*{The General Finite Abelian Case}
+
+By the structure theorem for finite abelian groups,
+\[
+  G\cong C_{n_1}\times C_{n_2}\times \cdots \times C_{n_r}.
+\]
+Thus every irreducible representation of \(G\) is obtained by combining the
+characters of the cyclic factors. More precisely, if \(\omega_i\) is a
+primitive \(n_i\)-th root of unity, then for
+\(0\leq k_i<n_i\) we have a character
+\[
+  \chi_{(k_1,\dots,k_r)}(x_1^{j_1},\dots,x_r^{j_r})
+  =
+  \prod_{i=1}^r \omega_i^{\,k_i j_i}.
+\]
+Therefore:
+\begin{enumerate}[label=\arabic*.]
+  \item The number of inequivalent irreducible representations is
+  \(n_1n_2\cdots n_r=|G|\).
+  \item The dual group satisfies
+  \[
+    \widehat{G}\cong C_{n_1}\times\cdots\times C_{n_r}\cong G,
+  \]
+  although this isomorphism is not canonical in general.
+\end{enumerate}
+
+\subsection*{Orthogonality Relations}
+
+When \(\mathbb{F}=\mathbb{C}\), the irreducible characters satisfy the usual
+orthogonality relation
+\[
+  \frac{1}{|G|}\sum_{g\in G}\chi_i(g)\overline{\chi_j(g)}=\delta_{ij}.
+\]
+In particular, if \(\chi\neq \mathbf{1}\) is a nontrivial character, then
+\[
+  \sum_{g\in G}\chi(g)=0.
+\]
+
+\subsection*{Relation with Maschke's Theorem}
+
+Maschke's theorem says that every finite-dimensional representation of \(G\) is
+completely reducible when \(\operatorname{char}(\mathbb{F})\nmid |G|\). For a
+finite abelian group, the theorem above identifies the irreducible building
+blocks explicitly: they are precisely the characters. Hence every
+representation of a finite abelian group decomposes as a direct sum of
+characters:
+\[
+  V\cong \bigoplus_{\chi\in\widehat{G}} m_{\chi}\chi,
+\]
+where \(m_{\chi}\in \mathbb{Z}_{\ge 0}\) is the multiplicity of \(\chi\). This
+is the representation-theoretic prototype of Fourier analysis on finite
+abelian groups.
 
 \end{document}
