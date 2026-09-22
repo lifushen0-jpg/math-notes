@@ -8,3 +8,6 @@ $F = \begin{pmatrix}F_1 & & & \\ & F_2 & & \\& & \ddots & \\& & & F_k\end{pmatri
   
 
 $F = \begin{pmatrix}F_1 & \\ & F_2\end{pmatrix}$:F = \begin{pmatrix}F_1 & \\ & F_2\end{pmatrix}
+
+$\bar{A}=\frac{\sum_{i\in I}a_i}{\sum_{i\in I}1}=\frac{\sum_{i\in I}a_i}{N-N_0}$
+

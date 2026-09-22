@@ -1,0 +1,758 @@
+{
+  "userId": "ec45e3a7-7c5d-488d-83ff-b51a4f8ee2ac",
+  "isPaidUser": false,
+  "isPlusUser": false,
+  "entitlementToken": "",
+  "entitlementExpiresAt": 0,
+  "plusLicenseKey": "",
+  "openAIApiKey": "",
+  "openAIOrgId": "",
+  "huggingfaceApiKey": "",
+  "cohereApiKey": "",
+  "anthropicApiKey": "",
+  "googleApiKey": "",
+  "openRouterAiApiKey": "",
+  "xaiApiKey": "",
+  "mistralApiKey": "",
+  "deepseekApiKey": "",
+  "siliconflowApiKey": "",
+  "defaultChainType": "llm_chain",
+  "defaultModelKey": "google/gemini-2.5-flash|openrouterai",
+  "embeddingModelKey": "openai/text-embedding-3-small|openrouterai",
+  "contextTurns": 15,
+  "userSystemPrompt": "",
+  "openAIProxyBaseUrl": "",
+  "openAIEmbeddingProxyBaseUrl": "",
+  "stream": true,
+  "copilotFolder": "copilot",
+  "copilotRootHistory": [
+    "copilot"
+  ],
+  "upgradedToV8FromLegacy": false,
+  "defaultSaveFolder": "copilot/copilot-conversations",
+  "defaultConversationTag": "copilot-conversation",
+  "autosaveChat": true,
+  "autoAddActiveContentToContext": true,
+  "defaultOpenArea": "view",
+  "defaultSendShortcut": "enter",
+  "customPromptsFolder": "copilot/copilot-custom-prompts",
+  "indexVaultToVectorStore": "ON MODE SWITCH",
+  "qaExclusions": "copilot",
+  "qaInclusions": "",
+  "chatNoteContextPath": "",
+  "chatNoteContextTags": [],
+  "enableIndexSync": true,
+  "debug": false,
+  "maxSourceChunks": 30,
+  "enableInlineCitations": true,
+  "groqApiKey": "",
+  "activeModels": [
+    {
+      "name": "copilot-plus-flash",
+      "provider": "copilot-plus",
+      "enabled": true,
+      "isBuiltIn": true,
+      "core": true,
+      "plusExclusive": true,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "google/gemini-2.5-flash",
+      "provider": "openrouterai",
+      "enabled": true,
+      "isBuiltIn": true,
+      "core": true,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "gpt-5.5",
+      "provider": "openai",
+      "enabled": true,
+      "isBuiltIn": true,
+      "core": true,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "gpt-5.4-mini",
+      "provider": "openai",
+      "enabled": true,
+      "isBuiltIn": true,
+      "core": true,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "google/gemini-3.5-flash",
+      "provider": "openrouterai",
+      "enabled": true,
+      "isBuiltIn": true,
+      "capabilities": [
+        "vision",
+        "reasoning"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "claude-sonnet-4-6",
+      "provider": "anthropic",
+      "enabled": true,
+      "isBuiltIn": true,
+      "capabilities": [
+        "vision",
+        "reasoning"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "gemini-3.5-flash",
+      "provider": "google",
+      "enabled": true,
+      "isBuiltIn": true,
+      "capabilities": [
+        "vision",
+        "reasoning"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "gemini-3.1-flash-lite",
+      "provider": "google",
+      "enabled": true,
+      "isBuiltIn": true,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "gemini-2.5-flash",
+      "provider": "google",
+      "enabled": true,
+      "isBuiltIn": true,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "google/gemini-3.1-pro-preview",
+      "provider": "openrouterai",
+      "enabled": false,
+      "isBuiltIn": true,
+      "capabilities": [
+        "vision",
+        "reasoning"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "google/gemini-2.5-pro",
+      "provider": "openrouterai",
+      "enabled": false,
+      "isBuiltIn": true,
+      "core": false,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "openai/gpt-5.5",
+      "provider": "openrouterai",
+      "enabled": false,
+      "isBuiltIn": true,
+      "core": false,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "openai/gpt-5.4-mini",
+      "provider": "openrouterai",
+      "enabled": false,
+      "isBuiltIn": true,
+      "core": false,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "grok-4.3",
+      "provider": "xai",
+      "enabled": false,
+      "isBuiltIn": true,
+      "core": false,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "x-ai/grok-4.3",
+      "provider": "openrouterai",
+      "enabled": false,
+      "isBuiltIn": true,
+      "core": false,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "gpt-4.1",
+      "provider": "openai",
+      "enabled": false,
+      "isBuiltIn": true,
+      "core": false,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "gpt-4.1-mini",
+      "provider": "openai",
+      "enabled": false,
+      "isBuiltIn": true,
+      "core": false,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "claude-opus-4-7",
+      "provider": "anthropic",
+      "enabled": false,
+      "isBuiltIn": true,
+      "capabilities": [
+        "vision",
+        "reasoning"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "claude-haiku-4-5",
+      "provider": "anthropic",
+      "enabled": false,
+      "isBuiltIn": true,
+      "capabilities": [
+        "vision",
+        "reasoning"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "enabled": false,
+      "isBuiltIn": true,
+      "capabilities": [
+        "vision",
+        "reasoning"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "gemini-2.5-pro",
+      "provider": "google",
+      "enabled": false,
+      "isBuiltIn": true,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "deepseek-chat",
+      "provider": "deepseek",
+      "enabled": false,
+      "isBuiltIn": true,
+      "apiKey": ""
+    },
+    {
+      "name": "deepseek-reasoner",
+      "provider": "deepseek",
+      "enabled": false,
+      "isBuiltIn": true,
+      "capabilities": [
+        "reasoning"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "deepseek-ai/DeepSeek-V3",
+      "provider": "siliconflow",
+      "enabled": false,
+      "isBuiltIn": false,
+      "baseUrl": "https://api.siliconflow.com/v1",
+      "apiKey": ""
+    },
+    {
+      "name": "deepseek-ai/DeepSeek-R1",
+      "provider": "siliconflow",
+      "enabled": false,
+      "isBuiltIn": false,
+      "baseUrl": "https://api.siliconflow.com/v1",
+      "capabilities": [
+        "reasoning"
+      ],
+      "apiKey": ""
+    }
+  ],
+  "activeEmbeddingModels": [
+    {
+      "name": "copilot-plus-small",
+      "provider": "copilot-plus",
+      "enabled": true,
+      "isBuiltIn": true,
+      "isEmbeddingModel": true,
+      "core": true,
+      "plusExclusive": true,
+      "apiKey": ""
+    },
+    {
+      "name": "copilot-plus-large",
+      "provider": "copilot-plus-jina",
+      "enabled": true,
+      "isBuiltIn": true,
+      "isEmbeddingModel": true,
+      "core": true,
+      "plusExclusive": true,
+      "believerExclusive": true,
+      "dimensions": 1024,
+      "apiKey": ""
+    },
+    {
+      "name": "copilot-plus-multilingual",
+      "provider": "copilot-plus-jina",
+      "enabled": true,
+      "isBuiltIn": true,
+      "isEmbeddingModel": true,
+      "core": true,
+      "plusExclusive": true,
+      "dimensions": 512,
+      "apiKey": ""
+    },
+    {
+      "name": "openai/text-embedding-3-small",
+      "provider": "openrouterai",
+      "enabled": true,
+      "isBuiltIn": true,
+      "isEmbeddingModel": true,
+      "core": true,
+      "apiKey": ""
+    },
+    {
+      "name": "text-embedding-3-small",
+      "provider": "openai",
+      "enabled": true,
+      "isBuiltIn": true,
+      "isEmbeddingModel": true,
+      "core": true,
+      "apiKey": ""
+    },
+    {
+      "name": "gemini-embedding-001",
+      "provider": "google",
+      "enabled": true,
+      "isBuiltIn": true,
+      "isEmbeddingModel": true,
+      "core": true,
+      "apiKey": ""
+    },
+    {
+      "name": "gemini-embedding-2-preview",
+      "provider": "google",
+      "enabled": true,
+      "isBuiltIn": true,
+      "isEmbeddingModel": true,
+      "core": true,
+      "apiKey": ""
+    },
+    {
+      "name": "Qwen/Qwen3-Embedding-0.6B",
+      "provider": "siliconflow",
+      "enabled": true,
+      "isBuiltIn": true,
+      "isEmbeddingModel": true,
+      "core": true,
+      "baseUrl": "https://api.siliconflow.com/v1",
+      "apiKey": ""
+    },
+    {
+      "name": "text-embedding-3-large",
+      "provider": "openai",
+      "enabled": true,
+      "isBuiltIn": true,
+      "isEmbeddingModel": true,
+      "apiKey": ""
+    },
+    {
+      "name": "embed-multilingual-light-v3.0",
+      "provider": "cohereai",
+      "enabled": true,
+      "isBuiltIn": true,
+      "isEmbeddingModel": true,
+      "apiKey": ""
+    },
+    {
+      "name": "text-embedding-004",
+      "provider": "google",
+      "enabled": true,
+      "isBuiltIn": true,
+      "isEmbeddingModel": true,
+      "apiKey": ""
+    }
+  ],
+  "embeddingRequestsPerMin": 60,
+  "embeddingBatchSize": 16,
+  "disableIndexOnMobile": true,
+  "numPartitions": 1,
+  "lexicalSearchRamLimit": 100,
+  "promptUsageTimestamps": {},
+  "promptSortStrategy": "timestamp",
+  "chatHistorySortStrategy": "recent",
+  "projectsFolder": "copilot/projects",
+  "defaultConversationNoteName": "{$topic}@{$date}_{$time}",
+  "inlineEditCommands": [],
+  "projectList": [],
+  "lastDismissedVersion": "4.0.6",
+  "passMarkdownImages": true,
+  "enableAutonomousAgent": true,
+  "enableCustomPromptTemplating": true,
+  "enableSemanticSearchV3": false,
+  "enableSelfHostMode": false,
+  "enableMiyo": false,
+  "enableMiyoSearchSkill": false,
+  "miyoSearchAll": false,
+  "miyoServerUrl": "",
+  "miyoSyncedExclusions": "",
+  "selfHostSearchProvider": "firecrawl",
+  "firecrawlApiKey": "",
+  "perplexityApiKey": "",
+  "parallelApiKey": "",
+  "exaApiKey": "",
+  "supadataApiKey": "",
+  "docProcessorBackend": "plus",
+  "enableLexicalBoosts": true,
+  "suggestedDefaultCommands": false,
+  "autonomousAgentMaxIterations": 4,
+  "autonomousAgentEnabledToolIds": [
+    "localSearch",
+    "readNote",
+    "webSearch",
+    "pomodoro",
+    "youtubeTranscription",
+    "writeFile",
+    "editFile",
+    "updateMemory"
+  ],
+  "reasoningEffort": "low",
+  "verbosity": "medium",
+  "memoryFolderName": "copilot/memory",
+  "enableRecentConversations": true,
+  "maxRecentConversations": 30,
+  "enableSavedMemory": true,
+  "quickCommandIncludeNoteContext": true,
+  "autoIncludeTextSelection": false,
+  "autoAddSelectionToContext": false,
+  "autoAcceptEdits": false,
+  "diffViewMode": "split",
+  "userSystemPromptsFolder": "copilot/system-prompts",
+  "defaultSystemPromptTitle": "",
+  "autoCompactThreshold": 128000,
+  "convertedDocOutputFolder": "",
+  "agentMode": {
+    "byok": {},
+    "activeBackend": "codex",
+    "backends": {},
+    "debugFullFrames": true,
+    "notificationSound": true,
+    "notificationSoundId": "piano",
+    "welcomeDismissed": true,
+    "skills": {
+      "folder": "copilot/skills"
+    },
+    "deviceProfiles": {
+      "5a7717a9-8f4b-45e8-8516-d3d56e513852": {
+        "codex": {
+          "binaryPath": "C:\\Users\\Lenovo\\AppData\\Roaming\\npm\\node_modules\\@agentclientprotocol\\codex-acp\\dist\\index.js"
+        }
+      },
+      "2a2d112c-a0b5-4b23-9d1f-b3afd0d22ec1": {
+        "codex": {
+          "binaryPath": "C:\\Users\\Lenovo\\AppData\\Roaming\\npm\\node_modules\\@agentclientprotocol\\codex-acp\\dist\\index.js"
+        }
+      }
+    }
+  },
+  "providers": {
+    "4404e2ae-3fb9-4393-b020-27156d14f473": {
+      "providerType": "openai-compatible",
+      "displayName": "Codex",
+      "origin": {
+        "kind": "agent",
+        "agentType": "codex"
+      },
+      "requiresApiKey": false,
+      "providerId": "4404e2ae-3fb9-4393-b020-27156d14f473",
+      "addedAt": 1788427732327,
+      "apiKeyKeychainId": null
+    }
+  },
+  "configuredModels": [
+    {
+      "providerId": "4404e2ae-3fb9-4393-b020-27156d14f473",
+      "info": {
+        "id": "gpt-5.6-sol[low]",
+        "displayName": "GPT-5.6-Sol (low)",
+        "description": "Reliable agentic workhorse for everyday tasks. Fast responses with lighter reasoning"
+      },
+      "configuredModelId": "bdcbf7c3-7036-4551-a3fc-a8c1fd97c333",
+      "configuredAt": 1788427732436
+    },
+    {
+      "providerId": "4404e2ae-3fb9-4393-b020-27156d14f473",
+      "info": {
+        "id": "gpt-5.6-sol[medium]",
+        "displayName": "GPT-5.6-Sol (medium)",
+        "description": "Reliable agentic workhorse for everyday tasks. Balances speed and reasoning depth for everyday tasks"
+      },
+      "configuredModelId": "409815ce-9302-4177-b103-5db18132ee86",
+      "configuredAt": 1788427732437
+    },
+    {
+      "providerId": "4404e2ae-3fb9-4393-b020-27156d14f473",
+      "info": {
+        "id": "gpt-5.6-sol[high]",
+        "displayName": "GPT-5.6-Sol (high)",
+        "description": "Reliable agentic workhorse for everyday tasks. Greater reasoning depth for complex problems"
+      },
+      "configuredModelId": "eee74aa8-9bc7-4380-b362-352f773b9b16",
+      "configuredAt": 1788427732438
+    },
+    {
+      "providerId": "4404e2ae-3fb9-4393-b020-27156d14f473",
+      "info": {
+        "id": "gpt-5.6-sol[xhigh]",
+        "displayName": "GPT-5.6-Sol (xhigh)",
+        "description": "Reliable agentic workhorse for everyday tasks. Extra high reasoning depth for complex problems"
+      },
+      "configuredModelId": "dea1e59a-f0f3-451e-81e2-6b629dd75a4f",
+      "configuredAt": 1788427732438
+    },
+    {
+      "providerId": "4404e2ae-3fb9-4393-b020-27156d14f473",
+      "info": {
+        "id": "gpt-5.6-sol[max]",
+        "displayName": "GPT-5.6-Sol (max)",
+        "description": "Reliable agentic workhorse for everyday tasks. Maximum reasoning depth for the hardest problems"
+      },
+      "configuredModelId": "2eb9e3e8-5051-4ea3-8965-1aeaa0a60353",
+      "configuredAt": 1788427732438
+    },
+    {
+      "providerId": "4404e2ae-3fb9-4393-b020-27156d14f473",
+      "info": {
+        "id": "gpt-5.6-sol[ultra]",
+        "displayName": "GPT-5.6-Sol (ultra)",
+        "description": "Reliable agentic workhorse for everyday tasks. Maximum reasoning with automatic task delegation"
+      },
+      "configuredModelId": "288853aa-31f8-4859-907d-4ee7c3925251",
+      "configuredAt": 1788427732438
+    },
+    {
+      "providerId": "4404e2ae-3fb9-4393-b020-27156d14f473",
+      "info": {
+        "id": "gpt-5.6-terra[low]",
+        "displayName": "GPT-5.6-Terra (low)",
+        "description": "Balanced agentic coding model for everyday work. Fast responses with lighter reasoning"
+      },
+      "configuredModelId": "7701fe5b-0a30-4ccc-97de-8f66b2885a3f",
+      "configuredAt": 1788427732439
+    },
+    {
+      "providerId": "4404e2ae-3fb9-4393-b020-27156d14f473",
+      "info": {
+        "id": "gpt-5.6-terra[medium]",
+        "displayName": "GPT-5.6-Terra (medium)",
+        "description": "Balanced agentic coding model for everyday work. Balances speed and reasoning depth for everyday tasks"
+      },
+      "configuredModelId": "3fd1be93-3b84-4aaf-8e3d-38255622cdd7",
+      "configuredAt": 1788427732439
+    },
+    {
+      "providerId": "4404e2ae-3fb9-4393-b020-27156d14f473",
+      "info": {
+        "id": "gpt-5.6-terra[high]",
+        "displayName": "GPT-5.6-Terra (high)",
+        "description": "Balanced agentic coding model for everyday work. Greater reasoning depth for complex problems"
+      },
+      "configuredModelId": "547f17b1-2cdc-4218-a352-1f2e790ff58c",
+      "configuredAt": 1788427732439
+    },
+    {
+      "providerId": "4404e2ae-3fb9-4393-b020-27156d14f473",
+      "info": {
+        "id": "gpt-5.6-terra[xhigh]",
+        "displayName": "GPT-5.6-Terra (xhigh)",
+        "description": "Balanced agentic coding model for everyday work. Extra high reasoning depth for complex problems"
+      },
+      "configuredModelId": "f3fa8c24-5283-4a06-a61f-f039714b9fab",
+      "configuredAt": 1788427732439
+    },
+    {
+      "providerId": "4404e2ae-3fb9-4393-b020-27156d14f473",
+      "info": {
+        "id": "gpt-5.6-terra[max]",
+        "displayName": "GPT-5.6-Terra (max)",
+        "description": "Balanced agentic coding model for everyday work. Maximum reasoning depth for the hardest problems"
+      },
+      "configuredModelId": "fc04994d-11aa-4dfc-affb-fb90c4d0f760",
+      "configuredAt": 1788427732439
+    },
+    {
+      "providerId": "4404e2ae-3fb9-4393-b020-27156d14f473",
+      "info": {
+        "id": "gpt-5.6-terra[ultra]",
+        "displayName": "GPT-5.6-Terra (ultra)",
+        "description": "Balanced agentic coding model for everyday work. Maximum reasoning with automatic task delegation"
+      },
+      "configuredModelId": "064b3d64-4ef4-46e6-a57d-71aaf7494186",
+      "configuredAt": 1788427732440
+    },
+    {
+      "providerId": "4404e2ae-3fb9-4393-b020-27156d14f473",
+      "info": {
+        "id": "gpt-5.6-luna[low]",
+        "displayName": "GPT-5.6-Luna (low)",
+        "description": "Fast and affordable agentic coding model. Fast responses with lighter reasoning"
+      },
+      "configuredModelId": "1509ab46-a6c7-4e22-b00b-855c8ef00d2d",
+      "configuredAt": 1788427732440
+    },
+    {
+      "providerId": "4404e2ae-3fb9-4393-b020-27156d14f473",
+      "info": {
+        "id": "gpt-5.6-luna[medium]",
+        "displayName": "GPT-5.6-Luna (medium)",
+        "description": "Fast and affordable agentic coding model. Balances speed and reasoning depth for everyday tasks"
+      },
+      "configuredModelId": "6bc1539c-dde1-4309-9890-3e7ff04ee058",
+      "configuredAt": 1788427732440
+    },
+    {
+      "providerId": "4404e2ae-3fb9-4393-b020-27156d14f473",
+      "info": {
+        "id": "gpt-5.6-luna[high]",
+        "displayName": "GPT-5.6-Luna (high)",
+        "description": "Fast and affordable agentic coding model. Greater reasoning depth for complex problems"
+      },
+      "configuredModelId": "f1f61b37-742d-4fee-b5de-b2473102d611",
+      "configuredAt": 1788427732440
+    },
+    {
+      "providerId": "4404e2ae-3fb9-4393-b020-27156d14f473",
+      "info": {
+        "id": "gpt-5.6-luna[xhigh]",
+        "displayName": "GPT-5.6-Luna (xhigh)",
+        "description": "Fast and affordable agentic coding model. Extra high reasoning depth for complex problems"
+      },
+      "configuredModelId": "39f5e04b-e6c0-443a-acd3-c9323e0105eb",
+      "configuredAt": 1788427732440
+    },
+    {
+      "providerId": "4404e2ae-3fb9-4393-b020-27156d14f473",
+      "info": {
+        "id": "gpt-5.6-luna[max]",
+        "displayName": "GPT-5.6-Luna (max)",
+        "description": "Fast and affordable agentic coding model. Maximum reasoning depth for the hardest problems"
+      },
+      "configuredModelId": "d1da08e6-ca8b-4be8-a302-489249c056f1",
+      "configuredAt": 1788427732440
+    },
+    {
+      "providerId": "4404e2ae-3fb9-4393-b020-27156d14f473",
+      "info": {
+        "id": "gpt-5.5[low]",
+        "displayName": "GPT-5.5 (low)",
+        "description": "Proven previous-generation model for coding and general work. Fast responses with lighter reasoning"
+      },
+      "configuredModelId": "a2e8efbc-e2b6-4f50-acce-e24931a4b4f5",
+      "configuredAt": 1788427732440
+    },
+    {
+      "providerId": "4404e2ae-3fb9-4393-b020-27156d14f473",
+      "info": {
+        "id": "gpt-5.5[medium]",
+        "displayName": "GPT-5.5 (medium)",
+        "description": "Proven previous-generation model for coding and general work. Balances speed and reasoning depth for everyday tasks"
+      },
+      "configuredModelId": "4324978e-b05d-422b-8afc-ac7cfef0a8bf",
+      "configuredAt": 1788427732441
+    },
+    {
+      "providerId": "4404e2ae-3fb9-4393-b020-27156d14f473",
+      "info": {
+        "id": "gpt-5.5[high]",
+        "displayName": "GPT-5.5 (high)",
+        "description": "Proven previous-generation model for coding and general work. Greater reasoning depth for complex problems"
+      },
+      "configuredModelId": "5a164eb6-1b37-4d09-b5d2-aa46555d5fec",
+      "configuredAt": 1788427732441
+    },
+    {
+      "providerId": "4404e2ae-3fb9-4393-b020-27156d14f473",
+      "info": {
+        "id": "gpt-5.5[xhigh]",
+        "displayName": "GPT-5.5 (xhigh)",
+        "description": "Proven previous-generation model for coding and general work. Extra high reasoning depth for complex problems"
+      },
+      "configuredModelId": "4e3ca2b9-6d18-4f6f-8ec2-0307230edee9",
+      "configuredAt": 1788427732441
+    }
+  ],
+  "backends": {
+    "codex": {
+      "enabledModels": [
+        "bdcbf7c3-7036-4551-a3fc-a8c1fd97c333",
+        "409815ce-9302-4177-b103-5db18132ee86",
+        "eee74aa8-9bc7-4380-b362-352f773b9b16",
+        "dea1e59a-f0f3-451e-81e2-6b629dd75a4f",
+        "2eb9e3e8-5051-4ea3-8965-1aeaa0a60353",
+        "288853aa-31f8-4859-907d-4ee7c3925251",
+        "7701fe5b-0a30-4ccc-97de-8f66b2885a3f",
+        "3fd1be93-3b84-4aaf-8e3d-38255622cdd7",
+        "547f17b1-2cdc-4218-a352-1f2e790ff58c",
+        "f3fa8c24-5283-4a06-a61f-f039714b9fab",
+        "fc04994d-11aa-4dfc-affb-fb90c4d0f760",
+        "064b3d64-4ef4-46e6-a57d-71aaf7494186",
+        "1509ab46-a6c7-4e22-b00b-855c8ef00d2d",
+        "6bc1539c-dde1-4309-9890-3e7ff04ee058",
+        "f1f61b37-742d-4fee-b5de-b2473102d611",
+        "39f5e04b-e6c0-443a-acd3-c9323e0105eb",
+        "d1da08e6-ca8b-4be8-a302-489249c056f1",
+        "a2e8efbc-e2b6-4f50-acce-e24931a4b4f5",
+        "4324978e-b05d-422b-8afc-ac7cfef0a8bf",
+        "5a164eb6-1b37-4d09-b5d2-aa46555d5fec",
+        "4e3ca2b9-6d18-4f6f-8ec2-0307230edee9"
+      ]
+    }
+  },
+  "_keychainVaultId": "0ff48275",
+  "settingsVersion": 12
+}
